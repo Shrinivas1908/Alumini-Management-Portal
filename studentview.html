@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlumniSphere | SIH 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        .sidebar-item:hover { background: rgba(255, 255, 255, 0.1); border-left: 4px solid #818cf8; }
+        .status-pill { padding: 4px 12px; border-radius: 99px; font-size: 0.75rem; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <div class="flex min-h-screen">
+        <aside class="w-64 bg-slate-900 text-white flex flex-col">
+            <div class="p-6">
+                <h1 class="text-2xl font-bold tracking-widest text-indigo-400">ALUMNI<span class="text-white">SPHERE</span></h1>
+                <p class="text-xs text-slate-400 mt-1">SIH Problem Statement 25017</p>
+            </div>
+            
+            <nav class="flex-1 mt-6">
+                <a href="#" class="sidebar-item flex items-center px-6 py-4 transition-all">
+                    <span class="mr-3">📊</span> Dashboard
+                </a>
+                <a href="#" class="sidebar-item flex items-center px-6 py-4 transition-all bg-slate-800 border-l-4 border-indigo-500">
+                    <span class="mr-3">👥</span> Alumni Directory
+                </a>
+                <a href="#" class="sidebar-item flex items-center px-6 py-4 transition-all">
+                    <span class="mr-3">💼</span> Job Board
+                </a>
+                <a href="#" class="sidebar-item flex items-center px-6 py-4 transition-all">
+                    <span class="mr-3">🎁</span> Fundraising
+                </a>
+            </nav>
+
+            <div class="p-6 border-t border-slate-800">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center font-bold">GS</div>
+                    <div>
+                        <p class="text-sm font-semibold">Govind S.</p>
+                        <p class="text-xs text-slate-400">Administrator</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex-1 p-8 overflow-y-auto">
+            <header class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-800">Alumni Directory</h2>
+                <div class="space-x-4">
+                    <button style="border: 1px solid #cbd5e1;" class="px-4 py-2 rounded-lg bg-white hover:bg-slate-50 transition">Export CSV</button>
+                    <button class="px-6 py-2 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 shadow-lg shadow-indigo-200 transition">
+                        + Add Alumnus
+                    </button>
+                </div>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div class="glass p-6 rounded-2xl shadow-sm border border-white">
+                    <p class="text-slate-500 text-sm">Total Alumni</p>
+                    <h3 class="text-3xl font-bold mt-1">12,480</h3>
+                    <p class="text-green-500 text-xs mt-2">↑ 12% from last year</p>
+                </div>
+                <div class="glass p-6 rounded-2xl shadow-sm border border-white">
+                    <p class="text-slate-500 text-sm">Mentorship Connections</p>
+                    <h3 class="text-3xl font-bold mt-1">452</h3>
+                    <p class="text-indigo-500 text-xs mt-2">Active sessions</p>
+                </div>
+                <div class="glass p-6 rounded-2xl shadow-sm border border-white">
+                    <p class="text-slate-500 text-sm">Funds Raised</p>
+                    <h3 class="text-3xl font-bold mt-1">₹4.2 Lakh</h3>
+                    <p class="text-slate-400 text-xs mt-2">Target: ₹10 Lakh</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-200">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-slate-50 border-bottom border-slate-200">
+                        <tr>
+                            <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Alumnus Name</th>
+                            <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Batch</th>
+                            <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Company</th>
+                            <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Verification</th>
+                            <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="px-6 py-4">
+                                <p class="font-semibold text-slate-800">Govind Suryawanshi</p>
+                                <p class="text-xs text-slate-500">govind@example.com</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm text-slate-600">Class of 2024</td>
+                            <td class="px-6 py-4 text-sm text-slate-600">Google Inc.</td>
+                            <td class="px-6 py-4">
+                                <span class="status-pill bg-green-100 text-green-700">Verified</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <button class="text-indigo-600 hover:underline text-sm font-medium">View Profile</button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="px-6 py-4">
+                                <p class="font-semibold text-slate-800">Sneha Patil</p>
+                                <p class="text-xs text-slate-500">sneha.p@tech.com</p>
+                            </td>
+                            <td class="px-6 py-4 text-sm text-slate-600">Class of 2022</td>
+                            <td class="px-6 py-4 text-sm text-slate-600">Microsoft</td>
+                            <td class="px-6 py-4">
+                                <span class="status-pill bg-orange-100 text-orange-700">Pending</span>
+                            </td>
+                            <td class="px-6 py-4">
+                                <button class="text-indigo-600 hover:underline text-sm font-medium">View Profile</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
